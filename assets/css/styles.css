@@ -406,11 +406,29 @@ body.dark-theme {
   margin-bottom: .75rem;
 }
 
+.projects__section {
+  width: 100%;
+  margin-bottom: 2rem; /* Space between sections */
+  display: block; /* Ensures it's separate */
+}
+
 .projects__section-title {
-  text-align: center; /* Center the text */
-  margin: 3rem 0 2rem; /* Add space above (3rem) and below (2rem) */
-  font-size: 2rem; /* Adjust size if needed */
-  font-weight: bold;
+  width: 100%;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center; /* Center title */
+  display: block; /* Forces it to stay separate from grid */
+}
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Prevent h2 from being affected by grid */
+.projects__content > h2 {
+  grid-column: 1 / -1; /* Make sure it spans the whole width */
 }
 
 
